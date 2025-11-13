@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Grid — Selecionar Seção</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { text-align:center; }
+    #gridCanvas { border:1px solid #333; image-rendering: pixelated; }
+    .topbar { margin-bottom:10px; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <button onclick="voltar()">⬅ Voltar</button>
+    <span style="margin-left:10px">Clique em um quadrado 50×50 para abrir o modo pixel</span>
+  </div>
+  <div class="canvas-container">
+    <canvas id="gridCanvas"></canvas>
+  </div>
+
+  <script src="grid.js"></script>
+</body>
+</html>

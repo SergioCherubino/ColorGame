@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo de Colorir</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🎨 Jogo de Colorir</h1>
+  <button id="toggleModeBtn">🧩 Alternar para Pixel Mode</button>
+  <button id="resetAllBtn">🧹 Resetar Tudo</button>
+
+  <div class="controls">
+    <label for="brushSize">Tamanho do pincel:</label>
+    <input type="range" id="brushSize" min="2" max="50" value="10">
+    <span id="brushValue">10</span> px
+  </div>
+
+  <div class="canvas-container">
+    <canvas id="paintCanvas"></canvas>
+    <canvas id="cursorCanvas"></canvas>
+  </div>
+
+  <h2>Paleta de Cores</h2>
+  <div id="palette"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

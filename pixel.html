@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pixel by Number — Seção</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { text-align:center; }
+    #canvas { image-rendering: pixelated; border:1px solid #333; }
+    #palette {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .color-button {
+      width: 40px;
+      height: 40px;
+      margin: 4px;
+      border-radius: 6px;
+      border: 2px solid #333;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .color-button.selected {
+      outline: 3px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <h1>🟩 Pixel by Number</h1>
+  <p>Clique em um quadrado para pintar se corresponder à cor selecionada</p>
+
+  <div class="controls">
+    <button id="backButton">⬅ Voltar</button>
+    <button id="resetButton" style="margin-left:10px">🔄 Resetar</button>
+  </div>
+
+  <canvas id="canvas"></canvas>
+
+  <h2>Paleta</h2>
+  <div id="palette"></div>
+
+  <script src="pixel.js"></script>
+</body>
+</html>
+
