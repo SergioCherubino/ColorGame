@@ -121,4 +121,28 @@ function voltar() {
   window.location.href = "index.html";
 }
 
+function resetGridProgress() {
+  if (!confirm("Tem certeza que deseja apagar TODO o progresso da pintura?")) {
+    return;
+  }
+
+  // Limpa os mesmos dados usados no modo principal
+  localStorage.removeItem("paintedMask");
+  localStorage.removeItem("paintedPixelsByColor");
+  localStorage.removeItem("totalPixelsByColor");
+  localStorage.removeItem("selectedSquare");
+
+  // Remove saves de seções no modo pixel
+  for (let key in localStorage) {
+    if (key.startsWith("paintbynumber_progress_")) {
+      localStorage.removeItem(key);
+    }
+  }
+
+  // Recarregar a página já limpa
+  alert("Progresso apagado com sucesso!");
+  location.reload();
+}
+
 window.onload = initGrid;
+
