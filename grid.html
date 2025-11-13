@@ -15,6 +15,18 @@
   <div class="topbar">
     <button onclick="voltar()">⬅ Voltar</button>
     <span style="margin-left:10px">Clique em um quadrado 50×50 para abrir o modo pixel</span>
+    <button id="resetGridBtn" style="
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 10px 18px;
+        font-size: 16px;
+        background: #d9534f;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      ">Resetar Progresso</button>
   </div>
   <div class="canvas-container">
     <canvas id="gridCanvas"></canvas>
@@ -23,3 +35,4 @@
   <script src="grid.js"></script>
 </body>
 </html>
+
